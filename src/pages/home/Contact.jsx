@@ -1,105 +1,102 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { FiSend } from "react-icons/fi";
+import { MdEmail } from "react-icons/md";
+import { useNavigate } from "react-router";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast.success("✅ Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          // console.error(error.text);
+          toast.error(error);
+        }
+      );
+  };
+
   return (
-    <section className="min-h-screen px-6 py-16 bg-white dark:bg-gray-900 flex flex-col md:flex-row items-center md:items-start gap-10 max-w-6xl mx-auto rounded-lg shadow-lg">
-      {/* Left side - Contact Form */}
-      <motion.form
-        className="flex-1 max-w-md w-full bg-gray-100 dark:bg-gray-800 rounded-lg p-8 shadow-md"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-          Get In Touch
-        </h2>
-
-        <label className="block mb-4">
-          <span className="text-gray-700 dark:text-gray-300">Name</span>
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="mt-1 block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-            required
-          />
-        </label>
-
-        <label className="block mb-4">
-          <span className="text-gray-700 dark:text-gray-300">Email</span>
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="mt-1 block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-            required
-          />
-        </label>
-
-        <label className="block mb-6">
-          <span className="text-gray-700 dark:text-gray-300">Message</span>
-          <textarea
-            rows="4"
-            placeholder="Your Message"
-            className="mt-1 block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"
-            required
-          />
-        </label>
-
-        <button
-          type="submit"
-          className="w-full bg-pink-500 text-white font-semibold py-2 rounded-md hover:bg-pink-600 transition-colors"
-        >
-          Send Message
-        </button>
-      </motion.form>
-
-      {/* Right side - Contact Information */}
-      <motion.div
-        className="flex-1 max-w-md w-full bg-gray-50 dark:bg-gray-800 rounded-lg p-8 shadow-md"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-          Contact Information
-        </h2>
-
-        <div className="space-y-5 text-gray-700 dark:text-gray-300 text-lg">
+    <div
+      id="contact"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center p-6 gap-10"
+    >
+      {/* left side - form */}
+      <div className="w-full md:w-1/2 p-6 rounded-lg">
+        <form ref={form} onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <strong>Email:</strong>{" "}
-            <a
-              href="mailto:your.email@example.com"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              your.email@example.com
-            </a>
+            <label className="block mb-1">Full Name</label>
+            <input
+              type="text"
+              name="user_name"
+              placeholder="type your name ..."
+              className="w-full p-3 rounded-md border border-pink-500 bg-transparent outline-none text-white placeholder-gray-400"
+              required
+            />
           </div>
-
           <div>
-            <strong>Phone:</strong>{" "}
-            <a
-              href="tel:+1234567890"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              +1 234 567 890
-            </a>
+            <label className="block mb-1">Email Address</label>
+            <input
+              type="email"
+              name="user_email"
+              placeholder="type your email ..."
+              className="w-full p-3 rounded-md border border-pink-500 bg-transparent outline-none text-white placeholder-gray-400"
+              required
+            />
           </div>
-
           <div>
-            <strong>WhatsApp:</strong>{" "}
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-600 dark:text-green-400 hover:underline"
-            >
-              +1 234 567 890
-            </a>
+            <label className="block mb-1">Message</label>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="type your message here ..."
+              className="w-full p-3 rounded-md border border-pink-500 bg-transparent outline-none text-white placeholder-gray-400"
+              required
+            ></textarea>
           </div>
+          <button
+            type="submit"
+            className="flex items-center justify-center w-full text-center  gap-2 px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-md  font-semibold"
+          >
+            <span>
+              <FiSend />
+            </span>
+            Send
+          </button>
+        </form>
+      </div>
+
+      {/* right side - info */}
+      <div className="w-full md:w-1/2 space-y-6">
+        <h2 className="text-4xl font-bold text-pink-500">GET IN TOUCH</h2>
+        <p className="text-lg">Fill in the form to start a conversation</p>
+
+        <div className="flex items-center gap-4 text-lg">
+          <FaLocationDot className="text-xl text-pink-400" />
+          <span>Cumilla, Bangladesh</span>
         </div>
-      </motion.div>
-    </section>
+        <div className="flex items-center gap-4 text-lg">
+          <MdEmail className="text-xl text-pink-400" />
+          <span>mollarasel972@gmail.com</span>
+        </div>
+      </div>
+    </div>
   );
 };
 

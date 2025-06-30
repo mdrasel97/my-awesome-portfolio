@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 // import apiAnimation from "../assets/api-animation.json";
 import apiAnimation from "../../assets/animation-api.json";
+import { Link as ScrollLink } from "react-scroll";
 import {
   FaFacebookF,
   FaInstagram,
@@ -14,8 +16,8 @@ import { Download } from "lucide-react";
 
 const HeroBanner = () => {
   return (
-    <section className="w-full bg-gradient-to-r from-purple-950 via-purple-900 to-purple-950 text-white py-12 md:py-20">
-      <div className="container h-[350px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 gap-10 md:w-[98%]">
+    <section className="w-full bg-gradient-to-r from-purple-950 via-purple-900 to-purple-950 text-white py-6 md:py-8">
+      <div className="container min-h-[400px] md:min-h-[450px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 gap-10 md:w-[98%]">
         {/* Left Content */}
         <div className="md:w-1/2 text-center md:text-left space-y-4">
           <p className="text-sm text-yellow-300 uppercase tracking-wider">
@@ -25,19 +27,20 @@ const HeroBanner = () => {
             Hi, I'm <span className="text-white">Md Rasel</span>
           </h1>
           <h2 className="text-3xl sm:text-4xl font-extrabold">
+            Web Developer{" "}
             <span className="text-pink-400">
               <Typewriter
-                words={["Full-Stack", "Fron-end "]}
-                loop={false}
+                words={["| Full-Stack", "| Front-End"]}
+                loop={true}
                 cursor
                 cursorStyle="|"
                 typeSpeed={200}
                 deleteSpeed={50}
                 delaySpeed={1000}
               />
-            </span>{" "}
-            Web Developer
+            </span>
           </h2>
+
           <p className="text-gray-200 max-w-md mx-auto md:mx-0">
             I am a passionate Full-Stack Web Developer with expertise in both
             frontend and backend technologies.
@@ -45,12 +48,24 @@ const HeroBanner = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
-            <Button className="px-6 py-2 text-lg">My Projects</Button>
+            <ScrollLink to="projects" smooth={true} duration={500} offset={-70}>
+              <Button className="px-6 py-2 text-lg">My Projects</Button>
+            </ScrollLink>
             <Button
               variant="outline"
               className="px-6 text-black dark:text-white py-2 text-lg gap-2"
             >
-              <Download className="w-5 h-5" />
+              <motion.span
+                animate={{ y: [0, 6, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1,
+                  ease: "easeInOut",
+                  times: [0, 0.8, 1],
+                }}
+              >
+                <Download className="w-5 h-5" />
+              </motion.span>
               Download CV
             </Button>
           </div>

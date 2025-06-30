@@ -1,15 +1,16 @@
 import React from "react";
 import HeroBanner from "./HeroBanner";
 import About from "./About";
-import Project1 from "./Project1";
 import Contact from "./Contact";
+
+import Projects from "./Projects";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <HeroBanner />
       <About />
-      <Project1 />
+      <Projects />
       <Contact />
     </div>
   );

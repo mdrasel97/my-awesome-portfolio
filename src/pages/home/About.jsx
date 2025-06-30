@@ -6,7 +6,10 @@ import imgProfile from "../../assets/profile .png";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-16">
+    <div
+      id="about"
+      className="min-h-screen bg-white dark:bg-gray-950 flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-16"
+    >
       {/* ✅ Image Section (Left) */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
