@@ -5,7 +5,7 @@ import Project1 from "./Project1";
 
 const Projects = () => {
   return (
-    <div id="projects">
+    <div id="projects" className="space-y-3">
       <Project2 />
       <Project1 />
       <Project3 />

@@ -72,16 +72,31 @@ const HeroBanner = () => {
 
           {/* Social Icons */}
           <div className="flex items-center justify-center md:justify-start gap-4 pt-6 text-xl">
-            <a href="#" className="hover:text-pink-400">
+            {/* <a
+              href="https://web.facebook.com/mollarasel24/"
+              className="hover:text-pink-400"
+            >
               <FaInstagram />
-            </a>
-            <a href="#" className="hover:text-blue-400">
+            </a> */}
+            <a
+              target="blank"
+              href="https://www.linkedin.com/in/mdrasel-mahmud-bb8425372/"
+              className="hover:text-blue-400"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="#" className="hover:text-pink-300">
+            <a
+              href="mailto:mollarasel972@gmail.com"
+              target="blank"
+              className="hover:text-pink-300"
+            >
               <FaEnvelope />
             </a>
-            <a href="#" className="hover:text-blue-600">
+            <a
+              target="blank"
+              href="https://facebook.com/mollarasel24/"
+              className="hover:text-blue-600"
+            >
               <FaFacebookF />
             </a>
           </div>
