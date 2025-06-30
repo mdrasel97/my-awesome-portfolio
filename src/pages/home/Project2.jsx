@@ -66,11 +66,15 @@ const Project2 = () => {
             Book Shelf
           </h2>
           <p className="mb-6 leading-relaxed">
-            Roommate Finder is a modern web application that helps users find
-            suitable roommates based on preferences, budget, and location. Users
-            can post room listings, browse verified profiles, and securely
-            connect with potential matches. The platform uses React, Node.js,
-            MongoDB, and Firebase Authentication.
+            Book Shelf is a dynamic web application designed for book lovers to
+            organize, browse, and manage their personal library. Users can add
+            books, categorize them by genre or status (e.g., "Reading",
+            "Completed", "Wishlist"), and search through their collection with
+            ease. The platform supports user authentication, personalized
+            dashboards, and real-time updates. Built with React for the
+            frontend, Node.js and Express for the backend, and MongoDB for data
+            storage, Book Shelf offers a seamless and intuitive reading
+            management experience.
           </p>
 
           {/* 💡 Frontend & Backend Stack Section */}
@@ -122,23 +126,32 @@ const Project2 = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
-              Live Site
-            </Button>
-            <Button
-              variant="outline"
-              className="text-black dark:text-white text-lg flex items-center gap-2"
+            <a href="https://book-shelf-web.web.app/" target="blank">
+              <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
+                Live Site
+              </Button>
+            </a>
+            <a
+              href="https://github.com/mdrasel97/book-shelf-frontend"
+              target="blank"
             >
-              <FaGithub />
-              Frontend Repo
-            </Button>
-            <Button
-              variant="outline"
-              className="text-black dark:text-white text-lg flex items-center gap-2"
-            >
-              <FaGithub />
-              Backend Repo
-            </Button>
+              <Button
+                variant="outline"
+                className="text-black dark:text-white text-lg flex items-center gap-2"
+              >
+                <FaGithub />
+                Frontend Repo
+              </Button>
+            </a>
+            <a href="">
+              <Button
+                variant="outline"
+                className="text-black dark:text-white text-lg flex items-center gap-2"
+              >
+                <FaGithub />
+                Backend Repo
+              </Button>
+            </a>
           </div>
         </motion.div>
 

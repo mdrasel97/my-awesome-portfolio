@@ -12,7 +12,7 @@ const Footer = () => {
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} MD RASEL. All rights reserved.
         </p>
         <div className="flex space-x-6">
           <a

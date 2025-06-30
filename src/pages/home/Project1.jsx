@@ -140,23 +140,38 @@ const Project1 = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
-              Live Site
-            </Button>
-            <Button
-              variant="outline"
-              className="text-black dark:text-white text-lg flex items-center gap-2"
+            <a
+              href="https://simple-login-auth-9e384.firebaseapp.com/"
+              target="blank"
             >
-              <FaGithub />
-              Frontend Repo
-            </Button>
-            <Button
-              variant="outline"
-              className="text-black dark:text-white text-lg flex items-center gap-2"
+              <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
+                Live Site
+              </Button>
+            </a>
+            <a
+              href="https://github.com/mdrasel97/roomMate-finder"
+              target="blank"
             >
-              <FaGithub />
-              Backend Repo
-            </Button>
+              <Button
+                variant="outline"
+                className="text-black dark:text-white text-lg flex items-center gap-2"
+              >
+                <FaGithub />
+                Frontend Repo
+              </Button>
+            </a>
+            <a
+              href="https://github.com/mdrasel97/roomMate-finder-backend"
+              target="blank"
+            >
+              <Button
+                variant="outline"
+                className="text-black dark:text-white text-lg flex items-center gap-2"
+              >
+                <FaGithub />
+                Backend Repo
+              </Button>
+            </a>
           </div>
         </motion.div>
       </section>

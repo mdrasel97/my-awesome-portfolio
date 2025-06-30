@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { Download } from "lucide-react";
 import imgProfile from "../../assets/profile .png";
+import { Link as ScrollLink } from "react-scroll";
 
 const About = () => {
   return (
@@ -42,11 +43,16 @@ const About = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
-          <Link to="/contact">
+          <ScrollLink
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-50} // Optional: adjust for fixed navbar
+          >
             <Button className="bg-pink-500 text-white hover:bg-pink-600">
               Contact Me
             </Button>
-          </Link>
+          </ScrollLink>
 
           <Button variant="outline" className="text-black dark:text-white">
             <Download className="mr-2 w-5 h-5" />
