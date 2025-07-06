@@ -64,7 +64,7 @@ const Project3 = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold mb-4 dark:text-white text-pink-500">
+          <h2 className="text-4xl font-bold mb-4 dark:text-white text-primary">
             Job Track
           </h2>
           <p className="mb-6 leading-relaxed">
@@ -130,7 +130,7 @@ const Project3 = () => {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="https://jobtrack-auth.web.app/" target="blank">
-              <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
+              <Button className="bg-primary text-white text-xl hover:bg-primary">
                 Live Site
               </Button>
             </a>

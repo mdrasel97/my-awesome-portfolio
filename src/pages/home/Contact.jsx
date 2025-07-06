@@ -46,7 +46,7 @@ const Contact = () => {
               type="text"
               name="user_name"
               placeholder="type your name ..."
-              className="w-full p-3 rounded-md border border-pink-500 bg-transparent outline-none text-white placeholder-gray-400"
+              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none text-white placeholder-gray-400"
               required
             />
           </div>
@@ -56,7 +56,7 @@ const Contact = () => {
               type="email"
               name="user_email"
               placeholder="type your email ..."
-              className="w-full p-3 rounded-md border border-pink-500 bg-transparent outline-none text-white placeholder-gray-400"
+              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none text-white placeholder-gray-400"
               required
             />
           </div>
@@ -66,13 +66,13 @@ const Contact = () => {
               name="message"
               rows="5"
               placeholder="type your message here ..."
-              className="w-full p-3 rounded-md border border-pink-500 bg-transparent outline-none text-white placeholder-gray-400"
+              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none text-white placeholder-gray-400"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="flex items-center justify-center w-full text-center  gap-2 px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-md  font-semibold"
+            className="flex items-center justify-center w-full text-center  gap-2 px-6 py-3 bg-primary hover:bg-primary rounded-md text-white  font-semibold"
           >
             <span>
               <FiSend />
@@ -84,15 +84,15 @@ const Contact = () => {
 
       {/* right side - info */}
       <div className="w-full md:w-1/2 space-y-6">
-        <h2 className="text-4xl font-bold text-pink-500">GET IN TOUCH</h2>
+        <h2 className="text-4xl font-bold text-primary">GET IN TOUCH</h2>
         <p className="text-lg">Fill in the form to start a conversation</p>
 
         <div className="flex items-center gap-4 text-lg">
-          <FaLocationDot className="text-xl text-pink-400" />
+          <FaLocationDot className="text-xl text-primary" />
           <span>Cumilla, Bangladesh</span>
         </div>
         <div className="flex items-center gap-4 text-lg">
-          <MdEmail className="text-xl text-pink-400" />
+          <MdEmail className="text-xl text-primary" />
           <span>mollarasel972@gmail.com</span>
         </div>
       </div>

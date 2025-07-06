@@ -80,7 +80,7 @@ const Project1 = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold mb-4 dark:text-white text-pink-500">
+          <h2 className="text-4xl font-bold mb-4 dark:text-white text-primary">
             Roommate Finder
           </h2>
           <p className="mb-6 leading-relaxed">
@@ -144,7 +144,7 @@ const Project1 = () => {
               href="https://simple-login-auth-9e384.firebaseapp.com/"
               target="blank"
             >
-              <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
+              <Button className="bg-primary text-white text-xl hover:bg-primary">
                 Live Site
               </Button>
             </a>

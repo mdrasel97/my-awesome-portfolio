@@ -33,10 +33,10 @@ const About = () => {
         className="flex-1 text-center md:text-left"
       >
         <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">
-          About <span className="text-pink-500">Me</span>
+          About <span className="text-primary">Me</span>
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          I am a passionate <span className="text-pink-400">Full-Stack</span>{" "}
+          I am a passionate <span className="text-primary">Full-Stack</span>{" "}
           developer skilled in building modern web apps using React, Node.js,
           and Tailwind CSS. I focus on creating clean, efficient, and
           user-friendly interfaces with a strong backend structure.
@@ -49,14 +49,20 @@ const About = () => {
             duration={500}
             offset={-50} // Optional: adjust for fixed navbar
           >
-            <Button className="bg-pink-500 text-white hover:bg-pink-600">
+            <Button className="bg-primary text-white hover:bg-primary">
               Contact Me
             </Button>
           </ScrollLink>
 
-          <Button variant="outline" className="text-black dark:text-white">
-            <Download className="mr-2 w-5 h-5" />
-            Download CV
+          <Button
+            asChild
+            variant="outline"
+            className="text-black border border-primary dark:text-white"
+          >
+            <a href="https://drive.google.com/uc?export=download&id=1kyclBgM6ngQ4z4iFT1R3CabIqBYfN_cT">
+              <Download className="mr-2 w-5 h-5" />
+              Download CV
+            </a>
           </Button>
         </div>
       </motion.div>

@@ -2,35 +2,35 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 // import apiAnimation from "../assets/api-animation.json";
-import apiAnimation from "../../assets/animation-api.json";
+// import apiAnimation from "../../assets/animation-api.json";
+// import apiAnimation from "../../assets/Animation - 1751124767384.json";
+import apiAnimation from "../../assets/Animation - lottie-api.json";
 import { Link as ScrollLink } from "react-scroll";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import Lottie from "lottie-react";
 import { Typewriter } from "react-simple-typewriter";
 import { Download } from "lucide-react";
 
 const HeroBanner = () => {
   return (
-    <section className="w-full bg-gradient-to-r from-purple-950 via-purple-900 to-purple-950 text-white py-6 md:py-8">
+    <section className="w-full py-6 md:py-8">
       <div className="container min-h-[400px] md:min-h-[450px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 gap-10 md:w-[98%]">
         {/* Left Content */}
         <div className="md:w-1/2 text-center md:text-left space-y-4">
-          <p className="text-sm text-yellow-300 uppercase tracking-wider">
+          <p className="text-sm text-primary uppercase tracking-wider">
             Welcome to my world ✨
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold">
-            Hi, I'm <span className="text-white">Md Rasel</span>
+            Hi, I'm <span className="text-primary">Md Rasel</span>
           </h1>
           <h2 className="text-3xl sm:text-4xl font-extrabold">
-            Web Developer{" "}
-            <span className="text-pink-400">
+            {/* Web Developer{" "} */}
+            <span className="text-primary">
               <Typewriter
-                words={["| Full-Stack", "| Front-End"]}
+                words={[
+                  "| Full-Stack Web Developer",
+                  "| Front-End Web Developer",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -41,7 +41,7 @@ const HeroBanner = () => {
             </span>
           </h2>
 
-          <p className="text-gray-200 max-w-md mx-auto md:mx-0">
+          <p className=" max-w-md mx-auto md:mx-0">
             I am a passionate Full-Stack Web Developer with expertise in both
             frontend and backend technologies.
           </p>
@@ -52,21 +52,24 @@ const HeroBanner = () => {
               <Button className="px-6 py-2 text-lg">My Projects</Button>
             </ScrollLink>
             <Button
+              asChild
               variant="outline"
               className="px-6 text-black dark:text-white py-2 text-lg gap-2"
             >
-              <motion.span
-                animate={{ y: [0, 6, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1,
-                  ease: "easeInOut",
-                  times: [0, 0.8, 1],
-                }}
-              >
-                <Download className="w-5 h-5" />
-              </motion.span>
-              Download CV
+              <a href="https://drive.google.com/uc?export=download&id=1kyclBgM6ngQ4z4iFT1R3CabIqBYfN_cT">
+                <motion.span
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1,
+                    ease: "easeInOut",
+                    times: [0, 0.8, 1],
+                  }}
+                >
+                  <Download className="w-5 h-5" />
+                </motion.span>
+                Download CV
+              </a>
             </Button>
           </div>
 

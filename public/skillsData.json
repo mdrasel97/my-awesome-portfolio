@@ -1,0 +1,37 @@
+[
+  {
+    "name": "HTML5",
+    "icon": "FaHtml5",
+    "percent": 95,
+    "category": "Frontend",
+    "color": "text-orange-600"
+  },
+  {
+    "name": "CSS3",
+    "icon": "FaCss3Alt",
+    "percent": 90,
+    "category": "Frontend",
+    "color": "text-blue-600"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "FaJs",
+    "percent": 92,
+    "category": "Frontend",
+    "color": "text-yellow-400"
+  },
+  {
+    "name": "React",
+    "icon": "FaReact",
+    "percent": 90,
+    "category": "Frontend",
+    "color": "text-cyan-400"
+  },
+  {
+    "name": "Node.js",
+    "icon": "FaNodeJs",
+    "percent": 65,
+    "category": "Backend",
+    "color": "text-green-500"
+  }
+]

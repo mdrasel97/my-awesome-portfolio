@@ -62,7 +62,7 @@ const Project2 = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold mb-4 dark:text-white text-pink-500">
+          <h2 className="text-4xl font-bold mb-4 dark:text-white text-primary">
             Book Shelf
           </h2>
           <p className="mb-6 leading-relaxed">
@@ -127,7 +127,7 @@ const Project2 = () => {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="https://book-shelf-web.web.app/" target="blank">
-              <Button className="bg-pink-500 text-white text-xl hover:bg-pink-600">
+              <Button className="bg-primary text-white text-xl hover:bg-primary">
                 Live Site
               </Button>
             </a>
@@ -137,7 +137,7 @@ const Project2 = () => {
             >
               <Button
                 variant="outline"
-                className="text-black dark:text-white text-lg flex items-center gap-2"
+                className="text-black border border-primary dark:text-white text-lg flex items-center gap-2"
               >
                 <FaGithub />
                 Frontend Repo
@@ -146,7 +146,7 @@ const Project2 = () => {
             <a href="">
               <Button
                 variant="outline"
-                className="text-black dark:text-white text-lg flex items-center gap-2"
+                className="text-black border border-primary dark:text-white text-lg flex items-center gap-2"
               >
                 <FaGithub />
                 Backend Repo

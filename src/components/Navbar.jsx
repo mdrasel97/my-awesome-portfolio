@@ -56,7 +56,7 @@ const Navbar = () => {
           >
             <Button asChild>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1kyclBgM6ngQ4z4iFT1R3CabIqBYfN_cT"
                 download
                 className="flex items-center gap-2"
               >
