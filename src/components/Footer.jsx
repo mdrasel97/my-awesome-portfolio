@@ -19,7 +19,7 @@ const Footer = () => {
             href="https://github.com/yourgithub"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500 transition-colors"
+            className="hover:text-primary transition-colors"
             aria-label="GitHub"
           >
             {/* GitHub SVG icon */}
@@ -41,32 +41,37 @@ const Footer = () => {
             </motion.svg>
           </a>
           {/* Add more social links if you want */}
-          <motion.div
-            className="hover:text-pink-500 transition-colors"
-            animate={{ scale: [1, 1.1, 1], rotate: [0, 10, 0] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "easeInOut",
-            }}
+          <a
+            href="https://web.facebook.com/mollarasel24/"
+            className="hover:text-primary transition-colors"
           >
-            <svg
-              className="w-6 h-6 fill-current rounded-full"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+            <motion.div
+              className="hover:primary transition-colors"
+              animate={{ scale: [1, 1.1, 1], rotate: [0, 10, 0] }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
             >
-              <title>Facebook</title>
-              <path d="M22.675 0h-21.35C.596 0 0 .593 0 1.326v21.348C0 23.406.596 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.313h3.59l-.467 3.622h-3.123V24h6.116c.73 0 1.324-.594 1.324-1.326V1.326C24 .593 23.405 0 22.675 0z" />
-            </svg>
-          </motion.div>
+              <svg
+                className="w-6 h-6 fill-current rounded-full"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Facebook</title>
+                <path d="M22.675 0h-21.35C.596 0 0 .593 0 1.326v21.348C0 23.406.596 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.313h3.59l-.467 3.622h-3.123V24h6.116c.73 0 1.324-.594 1.324-1.326V1.326C24 .593 23.405 0 22.675 0z" />
+              </svg>
+            </motion.div>
+          </a>
 
           <a
             href="https://www.linkedin.com/in/mdrasel-mahmud-bb8425372/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-colors"
+            className="hover:text-primary transition-colors"
             aria-label="LinkedIn"
           >
             <motion.svg

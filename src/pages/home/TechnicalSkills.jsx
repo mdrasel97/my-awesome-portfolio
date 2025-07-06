@@ -1,11 +1,15 @@
+"use client";
+
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { MagicCard } from "@/components/magicui/magic-card";
+import { useTheme } from "next-themes";
+
 // ✅ src/utils/iconMap.js
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 // ✅ src/components/TechnicalSkills.jsx
 import React, { useEffect, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress";
 // import { iconMap } from "@/utils/iconMap";
 
 const iconMap = {
@@ -63,11 +67,28 @@ const TechnicalSkills = () => {
               {filteredSkills(category).map((skill) => {
                 const Icon = iconMap[skill.icon];
                 return (
-                  <Card key={skill.name} className="border-[#0c1a38]">
-                    <CardContent className="flex flex-col items-center justify-center gap-4 py-6">
-                      <Icon className={`text-5xl ${skill.color}`} />
-                      <h3 className="text-xl font-semibold">{skill.name}</h3>
-                    </CardContent>
+                  // <Card key={skill.name} className="border-[#0c1a38]">
+                  //   <CardContent className="flex flex-col items-center justify-center gap-4 py-6">
+                  //     <Icon className={`text-5xl ${skill.color}`} />
+                  //     <h3 className="text-xl font-semibold">{skill.name}</h3>
+                  //   </CardContent>
+                  // </Card>
+
+                  <Card
+                    key={skill.name}
+                    className="p-0 max-w-sm w-full shadow-none border-none"
+                  >
+                    <MagicCard
+                      gradientColor={
+                        useTheme === "dark" ? "#262626" : "#D9D9D955"
+                      }
+                      className="p-0"
+                    >
+                      <CardContent className="flex flex-col items-center justify-center gap-4 py-6">
+                        <Icon className={`text-5xl ${skill.color}`} />
+                        <h3 className="text-xl font-semibold">{skill.name}</h3>
+                      </CardContent>
+                    </MagicCard>
                   </Card>
                 );
               })}
