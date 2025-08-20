@@ -46,7 +46,7 @@ const Contact = () => {
               type="text"
               name="user_name"
               placeholder="type your name ..."
-              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none text-white placeholder-gray-400"
+              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none placeholder-gray-400"
               required
             />
           </div>
@@ -56,7 +56,7 @@ const Contact = () => {
               type="email"
               name="user_email"
               placeholder="type your email ..."
-              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none text-white placeholder-gray-400"
+              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none placeholder-gray-400"
               required
             />
           </div>
@@ -66,7 +66,7 @@ const Contact = () => {
               name="message"
               rows="5"
               placeholder="type your message here ..."
-              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none text-white placeholder-gray-400"
+              className="w-full p-3 rounded-md border border-primary bg-transparent outline-none placeholder-gray-400"
               required
             ></textarea>
           </div>

@@ -6,11 +6,10 @@ import { useTheme } from "next-themes";
 
 // ✅ src/utils/iconMap.js
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-// ✅ src/components/TechnicalSkills.jsx
+import { SiNextdotjs, SiExpress, SiMongodb, SiFirebase } from "react-icons/si";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-// import { iconMap } from "@/utils/iconMap";
 
 const iconMap = {
   FaHtml5: FaHtml5,
@@ -18,6 +17,10 @@ const iconMap = {
   FaJs: FaJs,
   FaReact: FaReact,
   FaNodeJs: FaNodeJs,
+  SiNextdotjs: SiNextdotjs,
+  SiExpress: SiExpress,
+  SiMongodb: SiMongodb,
+  SiFirebase: SiFirebase,
 };
 
 const TechnicalSkills = () => {
