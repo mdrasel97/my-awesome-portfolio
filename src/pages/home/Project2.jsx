@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 const projectImages = [
   "https://i.ibb.co/ZRxbspcV/Screenshot-2025-06-29-225915.png",
   "https://i.ibb.co/XkCDYxZK/Screenshot-2025-06-29-225946.png",
-  "https://i.ibb.co/LD3ZDk7B/Screenshot-2025-06-29-230049.png",
+  "https://i.ibb.co.com/wxN6cRz/Screenshot-2025-08-19-222434.png",
 ];
 
 const Project2 = () => {
@@ -49,10 +49,9 @@ const Project2 = () => {
 
   return (
     <>
-      <h2 className="text-3xl font-bold text-center my-6">My Projects</h2>
       <section
         ref={sliderContainer}
-        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col-reverse md:flex-row items-center gap-10 px-6 py-12"
+        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col-reverse md:flex-row items-center gap-10 px-6 py-8"
       >
         {/* Project Overview - left Side */}
         <motion.div

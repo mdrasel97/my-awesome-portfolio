@@ -51,7 +51,7 @@ const Project1 = () => {
     <>
       <section
         ref={sliderContainer}
-        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col md:flex-row items-center gap-10 px-6 py-12"
+        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col md:flex-row items-center gap-10 px-6 py-8"
       >
         {/* Carousel - left Side */}
         <motion.div

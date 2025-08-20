@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import { Download } from "lucide-react";
-import imgProfile from "../../assets/profile .png";
+import imgProfile from "../../assets/owner.jpg";
 import { Link as ScrollLink } from "react-scroll";
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
       id="about"
       className="min-h-screen bg-white dark:bg-gray-950 flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-16"
     >
-      {/* ✅ Image Section (Left) */}
+      {/* Image Section (Left) */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -19,9 +19,9 @@ const About = () => {
         className="flex-1"
       >
         <img
-          src={imgProfile} // 👉 replace with your own image path
+          src={imgProfile}
           alt="About"
-          className="w-full max-w-md mx-auto rounded-xl shadow-lg"
+          className="w-full max-w-md h-[400px] mx-auto rounded-xl shadow-lg"
         />
       </motion.div>
 

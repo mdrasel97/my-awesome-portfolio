@@ -9,7 +9,7 @@ const projectImages = [
   "https://i.ibb.co/ZzMbnZVr/Screenshot-2025-06-30-153452.png",
   "https://i.ibb.co/YT0SKy4m/Screenshot-2025-06-30-153515.png",
   "https://i.ibb.co/233pTYCk/Screenshot-2025-06-30-153555.png",
-  "https://i.ibb.co/TBLM43JN/Screenshot-2025-06-30-153527.png",
+  "https://i.ibb.co.com/pjzLQbGf/Screenshot-2025-08-19-222811.png",
 ];
 
 const Project3 = () => {
@@ -54,7 +54,7 @@ const Project3 = () => {
 
       <section
         ref={sliderContainer}
-        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col-reverse md:flex-row mt-5 items-center gap-10 px-6 py-12"
+        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col-reverse md:flex-row mt-5 items-center gap-10 px-6 py-8"
       >
         {/* Project Overview - left Side */}
         <motion.div
