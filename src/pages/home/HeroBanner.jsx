@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // import apiAnimation from "../../assets/Animation - 1751124767384.json";
 import apiAnimation from "../../assets/Animation - lottie-api.json";
 import { Link as ScrollLink } from "react-scroll";
-import { FaFacebookF, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Lottie from "lottie-react";
 import { Typewriter } from "react-simple-typewriter";
 import { Download } from "lucide-react";
@@ -84,16 +84,16 @@ const HeroBanner = () => {
             <a
               target="blank"
               href="https://www.linkedin.com/in/mdrasel-mahmud-bb8425372/"
-              className="hover:text-blue-400"
+              className="hover:text-blue-600"
             >
               <FaLinkedinIn />
             </a>
             <a
               href="mailto:mollarasel972@gmail.com"
               target="blank"
-              className="hover:text-pink-300"
+              className="hover:text-primary"
             >
-              <FaEnvelope />
+              <FaGithub />
             </a>
             <a
               target="blank"

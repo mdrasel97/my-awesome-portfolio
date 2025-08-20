@@ -36,10 +36,13 @@ const About = () => {
           About <span className="text-primary">Me</span>
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          I am a passionate <span className="text-primary">Full-Stack</span>{" "}
-          developer skilled in building modern web apps using React, Node.js,
-          and Tailwind CSS. I focus on creating clean, efficient, and
-          user-friendly interfaces with a strong backend structure.
+          I am a passionate and detail-oriented{" "}
+          <span className="text-primary">Front-End</span> Web Developer with a
+          strong interest in building intuitive and responsive user interfaces.
+          I thrive in collaborative environments and enjoy solving real-world
+          problems through clean and efficient code. My goal is to grow as a
+          developer while contributing to impactful and user-centric digital
+          solutions in a forward-thinking team. I love coding.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">

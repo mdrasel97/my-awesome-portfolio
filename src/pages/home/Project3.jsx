@@ -173,7 +173,7 @@ const Project3 = () => {
               <img
                 src={img}
                 alt={`Project ${i + 1}`}
-                className="w-full max-h-[400px] object-contain"
+                className="w-full h-[300px] object-fit"
               />
             </div>
           ))}

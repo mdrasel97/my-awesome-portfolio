@@ -53,7 +53,7 @@ const Project2 = () => {
       <h2 className="text-3xl font-bold text-center my-6">My Projects</h2>
       <section
         ref={sliderContainer}
-        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col-reverse md:flex-row items-center gap-10 px-6 py-8"
+        className="w-[98%] mx-auto rounded-lg border border-blue-500 bg-white dark:bg-gray-950 flex flex-col md:flex-row items-center gap-10 px-6 py-8"
       >
         {/* Project Overview - left Side */}
         <motion.div
@@ -74,8 +74,7 @@ const Project2 = () => {
             smart purchasing decisions. Our goal is to bring transparency and
             market awareness to everyday buyers, empowering them to shop with
             confidence. Whether you’re a vendor looking to share accurate prices
-            or a user trying to stay within budget, BazaarTrack is your go-to
-            tool for market insights.
+            or a user trying to stay within budget.
           </p>
 
           {/* 💡 Frontend & Backend Stack Section */}
@@ -170,7 +169,7 @@ const Project2 = () => {
               <img
                 src={img}
                 alt={`Project ${i + 1}`}
-                className="w-full max-h-[400px] object-contain"
+                className="w-full h-[300px] object-fit"
               />
             </div>
           ))}
